@@ -1,10 +1,7 @@
 public class Methods {
 
     public Node proc(Node root, char i){
-        Node node = new Node();
-
-        node.c = i;
-        node.next = null;
+        Node node = new Node(i);
 
         if(root==null) return node;
 
@@ -16,43 +13,33 @@ public class Methods {
         Node aux = root;
         while (true) {
             if (aux.next == null) {
-                aux.next = node; break;
+                aux.next = node;
+                break;
             }
             aux = aux.next;
         }
-
         return root;
     }
-
-
 
     private Node pop(Node root, Node node) {
         Node aux = root;
         Node prev = null;
-        boolean found = false;
 
-        if(aux.c == '(' && aux.next == null) {
-            return null;
-        }
-
-        while(aux != null) {
+        while(true) {
             if(aux.c == '(' && prev == null) {
-                aux = aux.next;
-                root = aux;
-                found = true;
+                root = aux.next;
                 break;
             }
             if (aux.c == '(') {
                 prev.next = aux.next;
-                found = true;
                 break;
             }
+
+            if(aux.next == null) return push(root, node);
+
             prev = aux;
             aux = aux.next;
         }
-
-        if(!found) return push(root, node);
-
         return root;
     }
 
