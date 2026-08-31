@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ejercicio0-1/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ejercicio0-1/README.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ejercicio0-1/README.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ejercicio0-1/README.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,11 +190,11 @@
   },
   "active": "a49a62303f2869bb",
   "lastOpenFiles": [
+    "Ejercicio0-1/README.md",
     "README.md",
     "Pasted image 20260830172312.png",
     "Ejercicio0-1/img/push-ejer-0-0.png",
     "Ejercicio0-1/img/pop-1-ejer-0-1.png",
-    "Ejercicio0-1/README.md",
     "Ejercicio0-1/img",
     "Ejercicio0-1/src/main/java/Methods.java~",
     "Ejercicio0-0/README.md",
