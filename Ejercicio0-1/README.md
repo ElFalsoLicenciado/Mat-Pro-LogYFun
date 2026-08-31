@@ -117,7 +117,7 @@ private Node push(Node root, Node node) {
 }
 ```
 
-![Push](push-ejer-0-0.png|700)
+![Push](img/push-ejer-0-0.png|700)
 
 #### Método `pop`
 
@@ -153,7 +153,7 @@ if(aux.c == '(' && prev == null) {
 ```
 
 
-![Pop caso 1](pop-1-ejer-0-1.png)
+![Pop caso 1](img/pop-1-ejer-0-1.png)
 
 2. **El `(` se encuentra en la posición 0+n** (siendo n >= 1 y n < longitud de la pila):
 
