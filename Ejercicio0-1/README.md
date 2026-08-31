@@ -3,13 +3,18 @@
 ## **Fecha**: 08/28/26 
 
 ## **Descripción**: 
-Crear un programa que funcione como una pila donde se almacenen '(' y ')', donde si se coloca un ')' se borre un '(' solo sí está antes del ')'. Si los paréntesis están en el orden correcta no quedará ninguno, de lo contrario quedarán paréntesis.
+Crear un programa que funcione como una lista donde se almacenan `(` y `)`, donde si se coloca un `)` se borre un `(` solo sí está antes del `)`. Si los paréntesis están en el orden correcta no quedará ninguno, de lo contrario quedarán paréntesis.
+
+## Recorrido de una lista
+
+![Pop caso 1](lista-ejer-0-1.png)
+
 
 ## Descripción del código
 
 ### Clase `Node`
 
-Primero hablemos de lo más importante, el nodo, para que funcione en tipo pila se crea un modelito llamado *Node*.
+Primero hablemos de lo más importante, el nodo, para que funcione en tipo lista se crea un modelito llamado *Node*.
 
 La estructura de un *Node* es sencilla, en *c* se almacena el paréntesis sea un `{` o `}` y *next* "guardaría" la referencia al nodo que le siguen. 
 
@@ -36,7 +41,7 @@ El siguiente código es el **constructor del nodo**,recibe un parámetro tipo *c
 En esta clase se inicializa el programa.
 
 Dentro de la clase *Main*, se el método **main** que permite ejecutar el programa y se inicializan las siguientes variables:
-- *root*: Nodo raíz de la pila
+- *root*: Nodo raíz de la lista
 - *sc*: Nos permite recibir input de texto desde la consola.
 - *mt*: Objeto para acceder a la lógica principal del programa.
 - *input*: Cadena donde se almacena la cadena de paréntesis.
@@ -57,7 +62,7 @@ Este es el ciclo del programa, a continuación se explica cada paso:
 ```java
 [...]
         while(true){
-            mt.show(root); // SE MUESTRA EL CONTENIDO DE LA PILA
+            mt.show(root); // SE MUESTRA EL CONTENIDO DE LA LISTA
             System.out.print("\nInput: ");
             input = sc.next(); // SE PIDE LA CADENA Y GUARDA EN INPUT
             if (input.equals("q")) return; // SI LA CADENA ES Q SE TERMINA EL PROGRAMA
@@ -73,7 +78,6 @@ Este es el ciclo del programa, a continuación se explica cada paso:
 ### Clase `Methods`
 
 Aquí tenemos la lógica para balancear los paréntesis.
-
 #### Método `proc`
 
 El primer método es *proc*, recibe de parámetros el nodo raíz y un carácter. En este método se decide que ruta tomar dependiendo del carácter introducido.
@@ -86,7 +90,7 @@ public Node proc(Node root, char i){
 	// SI NO HAY NODOS EN LA RAIZ, ENTONCES EL NUEVO NODO SERÁ LA RAÍZ
     if(root==null) return node;  
 	  
-	// SI EL CARACTER ES UN '('  SE AGREGUA AL FINAL DE LA PILA
+	// SI EL CARACTER ES UN '('  SE AGREGUA AL FINAL DE LA LISTA
     if(i == '(') return push(root, node);  
     // SI ES UN ')' PROCEDER AL MÉTODO POP
     return pop(root, node);  
@@ -95,9 +99,9 @@ public Node proc(Node root, char i){
 
 #### Método `push`
 
-En este método se realiza la lógica para agregar un nodo al final de la pila. Se reciben de parámetros:
-- *root*: Nodo raíz para empezar a navegar dentro de la pila.
-- *node*: Nodo a introducir en la pila.
+En este método se realiza la lógica para agregar un nodo al final de la lista. Se reciben de parámetros:
+- *root*: Nodo raíz para empezar a navegar dentro de la lista.
+- *node*: Nodo a introducir en la lista.
 
 ```java
 private Node push(Node root, Node node) {
@@ -112,18 +116,19 @@ private Node push(Node root, Node node) {
         }  
         // PASAR AL SIGUIENTE NODO
         aux = aux.next;  
-    }  
+    }
     return root;  
 }
 ```
 
-![Push](img/push-ejer-0-0.png)
+
+![Push](push-ejer-0-1.png)
 
 #### Método `pop`
 
-Si bien el método no es exclusivamente siempre para eliminar un nodo, en este se lleva la lógica a la hora de introducir un ')', esto significa que se debe buscar un '(' y eliminarlo, de lo contrario si no se encuentra se agrega el ')' a la pila.
+Si bien el método no es exclusivamente siempre para eliminar un nodo, en este se lleva la lógica a la hora de introducir un ')', esto significa que se debe buscar un '(' y eliminarlo, de lo contrario si no se encuentra se agrega el ')' a la lista.
 
-Al igual que  [[Ejercicio0-1/README#Método `push`|push]], recibe de parámetros *root* y *node* que fungen en lo mismo. Sin embargo, hay un elemento nuevo al principio del método y es *prev*. En *prev* irá guardando a *aux* mientras vamos navegando por la pila, este servirá para un caso en específico.
+Al igual que  [[Ejercicio0-1/README#Método `push`|push]], recibe de parámetros *root* y *node* que fungen en lo mismo. Sin embargo, hay un elemento nuevo al principio del método y es *prev*. En *prev* irá guardando a *aux* mientras vamos navegando por la lista, este servirá para un caso en específico.
 
 ```java
 private Node pop(Node root, Node node) {  
@@ -141,9 +146,7 @@ private Node pop(Node root, Node node) {
 
 Dividiré el método en 3 casos:
 
-1. **El `(` se encuentra en la posición 0**:
-
-Si hay un paréntesis al principio de la pila raíz ahora será el nodo siguiente a raíz. 
+1. **El `(` se encuentra en la posición 0**: Si hay un paréntesis al principio de la lista raíz ahora será el nodo siguiente a raíz. 
 
 ```java
 if(aux.c == '(' && prev == null) {  
@@ -155,7 +158,8 @@ if(aux.c == '(' && prev == null) {
 
 ![Pop caso 1](img/pop-1-ejer-0-1.png)
 
-2. **El `(` se encuentra en la posición 0+n** (siendo n >= 1 y n < longitud de la pila):
+
+2. **El `(` se encuentra en la posición 0+n** (siendo n >= 1 y n < longitud de la lista):  Si hay un paréntesis después del primer nodo de la lista, este nodo puede estar antes o en el final de la lista. 
 
 ```java
 if (aux.c == '(') {  
@@ -164,4 +168,16 @@ if (aux.c == '(') {
 }
 ```
 
-3. **No hay**: 
+
+![Pop caso 1](pop-2-ejer-0-1.png)
+
+3. **No hay**: Como no se encontró ningún `(` entonces el `)` se agregará a la lista.
+
+```java
+// DIRECTAMENTE IR A AGREGAR EL NODO A LA LISTA Y REGRESAR EL OBJETO
+if(aux.next == null) return push(root, node);
+```
+
+#### Método `show`
+
+En este método simplemente se recorre la lista y imprimen el carácter de cada nodo.
