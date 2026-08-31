@@ -7,7 +7,7 @@ Crear un programa que funcione como una lista donde se almacenan `(` y `)`, dond
 
 ## Recorrido de una lista
 
-![Pop caso 1](lista-ejer-0-1.png)
+![Pop caso 1](img/lista-ejer-0-1.png)
 
 
 ## Descripción del código
@@ -122,7 +122,7 @@ private Node push(Node root, Node node) {
 ```
 
 
-![Push](push-ejer-0-1.png)
+![Push](img/push-ejer-0-1.png)
 
 #### Método `pop`
 
@@ -169,7 +169,7 @@ if (aux.c == '(') {
 ```
 
 
-![Pop caso 1](pop-2-ejer-0-1.png)
+![Pop caso 1](img/pop-2-ejer-0-1.png)
 
 3. **No hay**: Como no se encontró ningún `(` entonces el `)` se agregará a la lista.
 
