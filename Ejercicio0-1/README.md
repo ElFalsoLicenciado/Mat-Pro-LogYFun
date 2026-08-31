@@ -117,7 +117,7 @@ private Node push(Node root, Node node) {
 }
 ```
 
-![Push](img/push-ejer-0-0.png|700)
+![Push](img/push-ejer-0-0.png)
 
 #### Método `pop`
 
