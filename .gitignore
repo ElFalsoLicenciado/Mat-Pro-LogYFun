@@ -2,3 +2,6 @@
 /Ejercicio0-0/.gitignore
 /Ejercicio0-1/.idea/*
 /Ejercicio0-1/target/*
+.obsidian/
+/.obsidian/
+/.obsidian/*
