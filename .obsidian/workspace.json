@@ -13,6 +13,36 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Ejercicio0-2/README.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      },
+      {
+        "id": "520db4d4a8fe36b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7d8b0402d7bce1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Ejercicio0-1/README.md",
                 "mode": "source",
                 "source": true,
@@ -200,13 +230,15 @@
   },
   "active": "a49a62303f2869bb",
   "lastOpenFiles": [
+    "Ejercicio0-2/src/main/java/Methods.java~",
+    "README.md",
+    "Ejercicio0-2/README.md",
+    "Ejercicio0-1/README.md",
     "Ejercicio0-1/img/push-ejer-0-1.png",
     "Ejercicio0-1/img/lista-ejer-0-1.png",
-    "Ejercicio0-1/README.md",
     "Ejercicio0-1/img/pop-2-ejer-0-1.png",
     "Ejercicio0-1/img/pop-1-ejer-0-1.png",
     "Pasted image 20260830180900.png",
-    "README.md",
     "Pasted image 20260830172312.png",
     "Ejercicio0-1/img",
     "Ejercicio0-1/src/main/java/Methods.java~",
