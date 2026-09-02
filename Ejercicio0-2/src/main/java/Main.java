@@ -28,7 +28,7 @@ public class Main {
                     System.out.print("\nDivision de: ");
                     input = sc.next();
                     dividendo = Integer.parseInt(input);
-                    System.out.print(" entre ");
+                    System.out.print("entre ");
                     input = sc.next();
                     divisor = Integer.parseInt(input);
                     System.out.print("es igual a:" + mt.divisionRestasRecursivo(divisor, dividendo));

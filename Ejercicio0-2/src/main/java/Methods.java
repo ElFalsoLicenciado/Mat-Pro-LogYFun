@@ -1,21 +1,20 @@
 public class Methods {
 
     public int factorialRecursivo(int n) {
-        int fac = 0;
-
-        return fac;
+        if (n == 0) return 1;
+        return n * factorialRecursivo(n-1);
     }
 
     public int fibonacciRecursivo(int n) {
-        int fib = 0;
+        if (n == 0) return 0;
 
-        return fib;
+        return n + fibonacciRecursivo(n-1);
     }
 
     public int divisionRestasRecursivo(int divisor, int dividendo) {
-        int resultado = 0;
+        if ((dividendo -  divisor) < 0 ) return 0;
 
-        return resultado;
+        return 1 + divisionRestasRecursivo(divisor, dividendo-divisor);
     }
 
 }
