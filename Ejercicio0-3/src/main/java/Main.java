@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Methods mt = new Methods();
 
         int[][] maze = {
                 {0, 1 , 1 , 0 , 1},
@@ -17,6 +16,8 @@ public class Main {
         int posY = 0;
         int dir = -1;
 
-        mt.show(maze, posX, posY);
+        Methods mt = new Methods(maze, posX, posY, dir);
+
+        mt.show();
     }
 }
