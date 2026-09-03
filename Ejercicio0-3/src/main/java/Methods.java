@@ -15,33 +15,6 @@ public class Methods {
         getGoalPos();
     }
 
-    public void show() {
-        for (int i = 0; i < MAX_Y; i++) {
-            System.out.print(" -");
-        }
-        System.out.println();
-        for (int j = 0; j < MAX_Y; j++) {
-            for (int i = 0; i < MAX_X; i++) {
-                if (i == 0 ) System.out.print("| ");
-                if (i == posX && j == posY) System.out.print("X");
-                else {
-                    switch (maze[j][i]) {
-                        case -1 -> System.out.print("*");
-                        case 0 -> System.out.print(" ");
-                        case 1 -> System.out.print("■");
-                        case 2 -> System.out.print("F");
-                    }
-                }
-                if (i == MAX_X-1 ) System.out.print(" |");
-                else System.out.print(" ");
-            }
-            System.out.println();
-        }
-        for (int i = 0; i < MAX_Y; i++) {
-            System.out.print(" -");
-        }
-    }
-
     public void show(int x, int y) {
         for (int i = 0; i < MAX_Y; i++) {
             System.out.print(" -");
@@ -105,7 +78,7 @@ public class Methods {
         posX = dx;
         posY = dy;
         maze[posY][posX] = -1;
-        
+
         move(dx, dy - 1);
         move(dx + 1, dy);
         move(dx, dy + 1);
