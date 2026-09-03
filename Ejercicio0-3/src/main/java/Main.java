@@ -6,18 +6,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[][] maze = {
-                {0, 1 , 1 , 0 , 1},
-                {0, 1 , 1 , 0 , 2},
+                {0, 1 , 1 , 1 , 1},
                 {0, 1 , 1 , 0 , 1},
                 {0, 0 , 0 , 0 , 1},
-                {0, 1 , 1 , 0 , 1}
+                {0, 1 , 1 , 0 , 1},
+                {0, 1 , 2 , 1 , 1},
+                {0, 0 , 0 , 0 , 0 }
+
         };
         int posX = 0;
         int posY = 0;
-        int dir = -1;
 
-        Methods mt = new Methods(maze, posX, posY, dir);
-
-        mt.show();
+        Methods mt = new Methods(maze, posX, posY);
+        mt.move(posX, posY);
     }
 }

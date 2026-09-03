@@ -3,86 +3,116 @@ public class Methods {
     private final int[][] maze;
     private final int MAX_X;
     private final int MAX_Y;
-    private int posX;
-    private int posY;
-    private int dir;
-    private SavePoint root;
+    private int endX, endY;
+    private int posX, posY;
 
-    public Methods(int[][] maze, int posX, int posY, int dir) {
+    public Methods(int[][] maze, int posX, int posY) {
         this.maze = maze;
         this.posX = posX;
         this.posY = posY;
-        this.dir = dir;
         MAX_X = maze[0].length;
         MAX_Y = maze.length;
-        root = null;
+        getGoalPos();
     }
 
-    public void show(){
+    public void show() {
+        for (int i = 0; i < MAX_Y; i++) {
+            System.out.print(" -");
+        }
+        System.out.println();
         for (int j = 0; j < MAX_Y; j++) {
             for (int i = 0; i < MAX_X; i++) {
-                if (i == posX && j == posY ) System.out.print("*");
+                if (i == 0 ) System.out.print("| ");
+                if (i == posX && j == posY) System.out.print("X");
                 else {
                     switch (maze[j][i]) {
+                        case -1 -> System.out.print("*");
                         case 0 -> System.out.print(" ");
                         case 1 -> System.out.print("■");
                         case 2 -> System.out.print("F");
                     }
                 }
-                System.out.print("|");
+                if (i == MAX_X-1 ) System.out.print(" |");
+                else System.out.print(" ");
             }
             System.out.println();
         }
-    }
-
-    public void move(int dir) {
-        this.dir = dir;
-
-        switch (dir) {
-            case 0 -> goUp();
-            case 1 -> goRight();
-            case 2 -> goDown();
-            case 3 -> goLeft();
+        for (int i = 0; i < MAX_Y; i++) {
+            System.out.print(" -");
         }
     }
 
-    private void goUp() {
-        if ((posY - 1) > 0) posY--;
+    public void show(int x, int y) {
+        for (int i = 0; i < MAX_Y; i++) {
+            System.out.print(" -");
+        }
+        System.out.println();
+
+        for (int j = 0; j < MAX_Y; j++) {
+            for (int i = 0; i < MAX_X; i++) {
+                if (i == 0 ) System.out.print("| ");
+                if (i == x && j == y) System.out.print("X");
+                else {
+                    switch (maze[j][i]) {
+                        case -1 -> System.out.print("*");
+                        case 0 -> System.out.print(" ");
+                        case 1 -> System.out.print("■");
+                        case 2 -> System.out.print("F");
+                    }
+                }
+                if (i == MAX_X-1 ) System.out.print(" |");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < MAX_Y; i++) {
+            System.out.print(" -");
+        }
     }
 
-    private void goRight() {
-        if ((posX + 1) < MAX_X) posX--;
+
+    private void getGoalPos() {
+        for (int j = 0; j < MAX_Y; j++) {
+            for (int i = 0; i < MAX_X; i++) {
+                if (maze[j][i] == 2) {
+                    endX = i;
+                    endY = j;
+                    return;
+                }
+            }
+        }
     }
 
-    private void goDown() {
-        if ((posY + 1) < MAX_Y) posY++;
-    }
+    public void move(int dx, int dy) {
+        System.out.printf("Current pos: %d, %d\n", dx, dy);
+        show(dx, dy);
+        System.out.println();
 
-    private void goLeft() {
-        if ((posX - 1) > 0 ) posX--;
-    }
-
-
-    public void goBack() {
-        SavePoint aux,prev = null;
-
-
-        if (root.next == null) {
-            posX = root.posX;
-            posY = root.posY;
-            dir = root.dir;
+        if (dx == endX && dy == endY) {
+            posX = dx;
+            posY = dy;
             return;
         }
 
-        aux = root;
-
-        while (aux.next != null) {
-            prev = aux;
-            aux = aux.next;
+        if (posX == endX && posY == endY) {
+            return;
         }
 
-        posX = prev.posX;
-        posY = prev.posY;
-        dir = prev.posY;
+        if (dx < 0 || dx > MAX_X - 1) return;
+        if (dy < 0 || dy > MAX_Y - 1) return;
+        if (maze[dy][dx] == 1 || maze[dy][dx] == -1) return;
+
+        posX = dx;
+        posY = dy;
+        maze[posY][posX] = -1;
+
+        show();
+
+        move(dx, dy - 1);
+        move(dx + 1, dy);
+        move(dx, dy + 1);
+        move(dx - 1, dy);
+
+        maze[posY][posX] = 0;
     }
 }
