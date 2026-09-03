@@ -105,14 +105,12 @@ public class Methods {
         posX = dx;
         posY = dy;
         maze[posY][posX] = -1;
-
-        show();
-
+        
         move(dx, dy - 1);
         move(dx + 1, dy);
         move(dx, dy + 1);
         move(dx - 1, dy);
 
-        maze[posY][posX] = 0;
+        maze[dy][dx] = 0;
     }
 }

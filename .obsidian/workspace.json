@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ejercicio0-2/README.md",
+                "file": "Ejercicio0-3/README.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -230,9 +230,22 @@
   },
   "active": "a49a62303f2869bb",
   "lastOpenFiles": [
+    "Ejercicio0-3/target/classes/Methods.class",
+    "Ejercicio0-3/src/main/java/Methods.java~",
+    "Ejercicio0-4/README.md",
+    "Ejercicio0-3/README.md",
+    "Ejercicio0-4/target/classes/Methods.class",
+    "Ejercicio0-4/target/classes/Main.class",
+    "Ejercicio0-4/target/generated-sources/annotations",
+    "Ejercicio0-4/target/generated-sources",
+    "Ejercicio0-4/target/classes",
+    "Ejercicio0-4/target",
+    "Ejercicio0-4/img/teselas-ejer-0-4.png",
+    "Ejercicio0-4/img",
+    "Ejercicio0-4/New folder",
+    "Ejercicio0-2/README.md",
     "Ejercicio0-2/src/main/java/Methods.java~",
     "README.md",
-    "Ejercicio0-2/README.md",
     "Ejercicio0-1/README.md",
     "Ejercicio0-1/img/push-ejer-0-1.png",
     "Ejercicio0-1/img/lista-ejer-0-1.png",
@@ -240,16 +253,6 @@
     "Ejercicio0-1/img/pop-1-ejer-0-1.png",
     "Pasted image 20260830180900.png",
     "Pasted image 20260830172312.png",
-    "Ejercicio0-1/img",
-    "Ejercicio0-1/src/main/java/Methods.java~",
-    "Ejercicio0-0/README.md",
-    "Ejercicio0-0/src/main/java/Ejer0.java",
-    "Ejercicio0-0/src/test/java",
-    "Ejercicio0-0/src/main/resources",
-    "Ejercicio0-0/src/main/java",
-    "Ejercicio0-0/src/test",
-    "Ejercicio0-0/src/main",
-    "Ejercicio0-0/pom.xml",
-    "Ejercicio0-0/src"
+    "Ejercicio0-0/README.md"
   ]
 }
