@@ -9,6 +9,8 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 3. [Factorial, Fibonacci y Divisiones](Ejercicio0-2/README.md)
 4. [Solucionador de laberintos](Ejercicio0-3/README.md)
 5. [Llenado de teselas](Ejercicio0-4/README.md)
+6. [Funciones primitivas en Common Lisp](Ejercicio1-0/README.md)
+7. 
 
 ## Detalles
 
