@@ -1,0 +1,8 @@
+Como programar en clisp:
+
+1. Abrir Cygwin64 Terminal.
+2. Escribir clisp
+3. Programar tu codigo en tu editor de texto
+4. Guardar el codigo con extension .lsp
+5. En la terminal escribir: (load "C:/tu/ruta/archivo.lsp")
+6. Script cargado y a darle
