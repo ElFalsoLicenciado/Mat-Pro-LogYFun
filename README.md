@@ -11,6 +11,7 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 5. [Llenado de teselas](Ejercicio0-4/README.md)
 6. [Funciones primitivas en Common Lisp](Ejercicio1-0/README.md)
 7. [Fórmulas de figuras geométricas](Ejercicio1-1/README.md)
+8. [CAD y CDR](Ejercicio1-2/README.md)
 
 ## Detalles
 
