@@ -12,6 +12,7 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 6. [Funciones primitivas en Common Lisp](Ejercicio1-0/README.md)
 7. [Fórmulas de figuras geométricas](Ejercicio1-1/README.md)
 8. [CAD y CDR](Ejercicio1-2/README.md)
+9. [SETQ y FORMAT](Ejercicio1-3/README.md)
 
 ## Detalles
 
@@ -23,3 +24,6 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 4. Guardar el codigo con extension `.lsp`
 5. En la terminal escribir: `(load "C:/tu/ruta/archivo.lsp")`
 6. Script cargado y a darle
+
+> Ruta de CLISP: `C:\Users\User\Documents\Semestres\7to\ProLogYFun\clisp-2.49\clisp.exe`
+> Ruta de Cygwin:  `C:\cygwin64\Cygwin.bat`

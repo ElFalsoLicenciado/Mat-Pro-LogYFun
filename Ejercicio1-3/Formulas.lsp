@@ -1,10 +1,13 @@
 ; 1
-( defun ar-cuad ( l ) 
-    ( * l l )
+( defun ar-cuad () 
+    (format t "Dame el lado de tu cuadrado: ")
+    (setq l (read))
+    (format t "El area de tu cuadrado es: ~A~%" ( * l l ))
 )
 
 ; 2
-(defun ar-rect ( b h ) 
+(defun ar-rect ()
+    (format t "Dame")
     (* b h)
 )
 
