@@ -13,6 +13,8 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 7. [Fórmulas de figuras geométricas](Ejercicio1-1/README.md)
 8. [CAD y CDR](Ejercicio1-2/README.md)
 9. [SETQ y FORMAT](Ejercicio1-3/README.md)
+10. [Recorrido recursivo de una lista](Ejercicio1-4/README.md)
+11. [text](Ejercicio1-5/README.md)
 
 ## Detalles
 
