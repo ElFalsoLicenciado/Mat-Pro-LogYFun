@@ -27,5 +27,13 @@ Rama dedicada para el almacenamiento de las actividades y proyectos hechos al tr
 5. En la terminal escribir: `(load "C:/tu/ruta/archivo.lsp")`
 6. Script cargado y a darle
 
+### Como programar en Prolog
+
+1. Abrir SWI-Prolog
+2. Programar tu codigo en tu editor de texto
+3. Guardar el codigo con extension `.pl`
+4. En la terminar escribir `consult("C:/tu/ruta/archivo.pl")`
+
 > Ruta de CLISP: `C:\Users\User\Documents\Semestres\7to\ProLogYFun\clisp-2.49\clisp.exe`
 > Ruta de Cygwin:  `C:\cygwin64\Cygwin.bat`
+> Ruta de Swi-Prolog `C:\Program Files\swipl\bin`

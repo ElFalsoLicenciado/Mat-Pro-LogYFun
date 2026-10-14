@@ -1,0 +1,15 @@
+padre(jose).
+padre(antonio).
+madre(julia).
+madre(maria).
+madrede(maria, antonio).
+madrede(maria, luis).
+padrede(jose, antonio).
+padrede(antonio, pedro).
+abuelo(X,Y):-padrede(X,Z), padrede(Z,Y), madrede(X,Z), padrede(Z,Y).
+
+%  Variables de individuo: X, Y, Z
+% Constantes de inviduo: jose, antonio, julia
+% Cuantificadores:
+% Propiedades: padre(), madre()
+% Relaciones: padrede(), madrede()
